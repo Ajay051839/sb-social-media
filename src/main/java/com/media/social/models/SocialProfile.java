@@ -8,6 +8,6 @@ public class SocialProfile {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @OneToOne
-    @JoinColumn(name="social_user") //specify the name of foreign key column
+    @JoinColumn(name="social_user") //specify the name of foreign key column (Custom name)
     private SocialUser user;
 }
