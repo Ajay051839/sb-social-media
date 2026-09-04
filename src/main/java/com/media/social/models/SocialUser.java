@@ -14,6 +14,6 @@ public class SocialUser {
     @JoinColumn(name="social_profile_id")
     private SocialProfile socialProfile;
 
-    @OneToMany  //Since one user can have multiple posts so List of Post
+    @OneToMany (mappedBy = "socialUser") //Since one user can have multiple posts so List of Post
     private List<Post> posts=new ArrayList<>();
 }
