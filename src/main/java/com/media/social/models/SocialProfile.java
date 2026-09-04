@@ -7,7 +7,8 @@ public class SocialProfile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @OneToOne
-    @JoinColumn(name="social_user") //specify the name of foreign key column (Custom name)
+
+    @OneToOne(mappedBy = "socialProfile")    //Non-owning side
+    //@JoinColumn(name="social_user") //specify the name of foreign key column (Custom name)
     private SocialUser user;
 }
