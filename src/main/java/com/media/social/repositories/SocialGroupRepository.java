@@ -1,4 +1,7 @@
 package com.media.social.repositories;
 
-public interface SocialGroupRepository {
+import com.media.social.models.SocialGroup;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface SocialGroupRepository extends JpaRepository<SocialGroup,Long> {
 }

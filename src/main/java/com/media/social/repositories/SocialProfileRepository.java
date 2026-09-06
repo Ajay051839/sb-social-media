@@ -1,4 +1,7 @@
 package com.media.social.repositories;
 
-public interface SocialProfileRepository {
+import com.media.social.models.SocialProfile;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface SocialProfileRepository extends JpaRepository<SocialProfile,Long> {
 }
