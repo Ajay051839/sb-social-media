@@ -1,5 +1,6 @@
 package com.media.social.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,6 +20,7 @@ public class SocialGroup {
     private Long Id;
 
     @ManyToMany(mappedBy = "socialGroups")
+    @JsonIgnore
     Set<SocialUser> socialUsers=new HashSet<>();
     // After Hashcode error below method implemented
     @Override

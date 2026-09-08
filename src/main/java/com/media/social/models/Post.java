@@ -1,5 +1,6 @@
 package com.media.social.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jdk.jfr.DataAmount;
 import lombok.AllArgsConstructor;
@@ -16,5 +17,6 @@ public class Post {
     private Long id;
 
     @ManyToOne
+    @JsonIgnore
     private SocialUser socialUser;
 }

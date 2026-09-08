@@ -1,5 +1,6 @@
 package com.media.social.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,6 +16,7 @@ public class SocialProfile {
     private Long id;
 
     @OneToOne(mappedBy = "socialProfile")    //Non-owning side
+    @JsonIgnore
     //@JoinColumn(name="social_user") //specify the name of foreign key column (Custom name)
     private SocialUser user;
 }
